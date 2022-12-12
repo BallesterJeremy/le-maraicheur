@@ -1,8 +1,10 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-alert */
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-globals */
-// eslint-disable-next-line import/no-unresolved
+/* eslint-disable-next-line import/no-unresolved */
+
 import axios from "@services/axios";
 import { useState, useEffect } from "react";
 import "../App.css";
@@ -203,7 +205,7 @@ export default function ArticlePost() {
             alt={selectedFile.alt}
           />
         )}
-        <button type="submit">Ajouter une image</button>
+        <button type="submit">Ajouter un article</button>
 
         {/* <Update /> */}
         {updateFile && (
@@ -212,13 +214,13 @@ export default function ArticlePost() {
             alt={updateFile.alt}
           />
         )}
-        <button type="button" onClick={handleUpdate}>
+        {/* <button type="button" onClick={handleUpdate}>
           {" "}
           Mettre à jour une image
-        </button>
+        </button> */}
         <button type="button" onClick={() => imageDelete(updateFile)}>
           {" "}
-          Supprimer une image
+          Supprimer un article
         </button>
         {fileCreated && (
           <img

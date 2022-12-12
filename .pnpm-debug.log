@@ -1,0 +1,21 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ELIFECYCLE",
+    "errno": "ENOENT",
+    "syscall": "spawn",
+    "file": "sh",
+    "pkgid": "template-fullstack@1.0.0",
+    "stage": "dev",
+    "script": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./frontend run dev\" \"npm --prefix ./backend run dev\"",
+    "pkgname": "template-fullstack",
+    "err": {
+      "name": "pnpm",
+      "message": "template-fullstack@1.0.0 dev: `concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./frontend run dev\" \"npm --prefix ./backend run dev\"`\nspawn ENOENT",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: template-fullstack@1.0.0 dev: `concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./frontend run dev\" \"npm --prefix ./backend run dev\"`\nspawn ENOENT\n    at ChildProcess.<anonymous> (/usr/local/Cellar/pnpm/6.32.6/libexec/lib/node_modules/pnpm/dist/pnpm.cjs:92290:22)\n    at ChildProcess.emit (node:events:520:28)\n    at maybeClose (node:internal/child_process:1092:16)\n    at Process.ChildProcess._handle.onexit (node:internal/child_process:302:5)"
+    }
+  }
+}

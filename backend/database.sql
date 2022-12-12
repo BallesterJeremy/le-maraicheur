@@ -36,6 +36,29 @@ CREATE TABLE `adm` (
   `question` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
+-- Creation d'une table team au lieu d'une jointure qui marchait mal
+
+CREATE TABLE `team` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(150) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `alt` varchar(255) NOT NULL,
+  `text` text NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+INSERT INTO `team` (`name`, `image`, `alt`, `text`)
+VALUES('Antoine Debray', '1667979987156-AntoinePicture.png', 'Antoine Debray Maraicher' , 
+'Pourquoi m’être lancé dans la maraîchage ?
+ Depuis mes 15 ans, j’ai toujours voulu reprendre l’entreprise familiale de poules pondeuses élevées en plein air. Après des études d’entrepreneuriat et de commerce,
+ je suis parti en Irlande pendant deux ans où j’ai travaillé en tant que commercial.
+ C’est en discutant avec mon père que je décide finalement de produire des légumes car je pense que les gens ont plus besoin d’excellents légumes que d’excellents œufs dans leur assiette. 
+ Ensuite, j’ai fait un an de wwoofing (volontariat dans des fermes contre gîte et couvert) en Nouvelle-Zélande. Puis, une dernière année au Luxembourg chez Krautgaart,
+ l’une des fermes maraichères d’Europe les plus renommées, où j’ai énormément appris. 
+ C’est donc à mon retour fin 2021 que je dispose les premières brouettes de compost sur le terrain,
+ avec l’aide de la famille et des copains du coin.
+ Ma première source d’inspiration fut le film Demain et l’exemple de la Ferme du Bec Hellouin en Normandiequi montrait qu’on pouvait produire une grande quantité de légumes sur très petite surface,
+ tout en créant de la biodiversité et se dégager un revenu décent. 
+ Ensuite les travaux de Jean-Martin Fortier, Charles Dowding et Richard Perkins m’ont encouragé à passer le pas.');
+
 CREATE TABLE `article` (
   `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `title` varchar(255) NULL,
@@ -166,7 +189,11 @@ VALUES
     'Arbres et fruits',
     'methode',
     4
-  );
+  ),
+  ('1670537428115-1659434132008-Carroussel1.JPG','Antoine champs','amap',1),
+ ('1670537453033-1662119717847-1657637557592-methode4.jpg','Serres', 'amap',  2), 
+('1670537763185-1657637047615-Carroussel3.jpg', 'Legumes', 'amap', 3), 
+('1670538296188-1668682761549-tableauM.png','Panier', 'amap', 4);
 
 CREATE TABLE `text` (
   `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -201,25 +228,6 @@ VALUES
     'home',
     2
   ),
-  -- text pour la page a propos
-  (
-    'Antoine Debray',
-    'Pourquoi m’être lancé dans la maraîchage ?
--- Depuis mes 15 ans, j’ai toujours voulu reprendre l’entreprise familiale de poules pondeuses élevées en plein air. Après des études d’entrepreneuriat et de commerce,
- je suis parti en Irlande pendant deux ans où j’ai travaillé en tant que commercial.
-  C’est en discutant avec mon père que je décide finalement de produire des légumes car je pense que les gens ont plus besoin d’excellents légumes que d’excellents œufs dans leur assiette. 
--- Ensuite, j’ai fait un an de wwoofing (volontariat dans des fermes contre gîte et couvert) en Nouvelle-Zélande. Puis, une dernière année au Luxembourg chez Krautgaart,
- l’une des fermes maraichères d’Europe les plus renommées, où j’ai énormément appris. C’est donc à mon retour fin 2021 que je dispose les premières brouettes de compost sur le terrain,
-  avec l’aide de la famille et des copains du coin.
--- Ma première source d’inspiration fut le film Demain et l’exemple de la Ferme du Bec Hellouin en Normandiequi montrait qu’on pouvait produire une grande quantité de légumes sur très petite surface,
- tout en créant de la biodiversité et se dégager un revenu décent. Ensuite les travaux de Jean-Martin Fortier, Charles Dowding et Richard Perkins m’ont encouragé à passer le pas.',
-    'propos',
-    1
-  ),
-  ('Équipier: N°1', '', 'propos', 2),
-  -- exemple insertion d'un membre d'équipe à supprimer plus tard
-  ('Équipier: N°2', '', 'propos', 3),
-  ('Équipier: N°3', '', 'propos', 2),
   -- text pour la page methode
   (
     'Sol vivant',
@@ -292,10 +300,5 @@ L’abonnement comprend l’approvisionnement en légumes naturels sur sol vivan
 ('', 'Le Maraîcheur propose des légumes riches en nutriments, qui ont poussé dans une terre vivante. Cultivés avec beaucoup damour et de passion, en harmonie avec la nature. Récoltés avec soin et lavés pour vous. 
 Le meilleur dans tout ça ? A chaque abonnement, vous protégez activement l’environnement et contribuez à la transition agricole.
 Et quand vous partez en vacances ?
-Faites profiter votre panier à vos proches ! Vous pouvez le faire récupérer par vos amis, voisins, un membre de votre famille … qui aura la chance de déguster de délicieux légumes', 'amap', 5),
-
-  ('Équipier: N°4', '', 'propos', 4),
-  ('Équipier: N°5', '', 'propos', 5),
-  ('Équipier: N°6', '', 'propos', 6),
-  ('Équipier: N°7', '', 'propos', 7)
+Faites profiter votre panier à vos proches ! Vous pouvez le faire récupérer par vos amis, voisins, un membre de votre famille … qui aura la chance de déguster de délicieux légumes', 'amap', 5)
 

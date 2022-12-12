@@ -34,7 +34,7 @@ export default function MarketPost() {
     formData.append("image", selectedFile);
 
     if (!selectedFile) {
-      return alert("Provide a picture do add");
+      return alert("Provide a picture to add");
     }
 
     const dataProd = {
@@ -60,7 +60,7 @@ export default function MarketPost() {
         }, 1500)
       );
     } catch (err) {
-      return "Une erreur s'est produite lors de l'ajout";
+      return alert("Une erreur s'est produite lors de l'ajout");
     }
   };
 

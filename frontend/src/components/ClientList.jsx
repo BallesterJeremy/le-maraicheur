@@ -14,6 +14,12 @@ export default function ClientList() {
   const [success, setSuccess] = useState(false);
   const [message, setMessage] = useState("");
   const [isArchived, setIsArchived] = useState(0);
+  const [showClass, setShowClass] = useState(false);
+
+  // eslint-disable-next-line no-unused-vars
+  const toggleClass = () => {
+    setShowClass(!showClass);
+  };
 
   const getClient = async () => {
     try {
@@ -110,7 +116,7 @@ export default function ClientList() {
         clientList
           .filter((client) => client.archived === isArchived)
           .map((clients) => {
-            const dateFormat = moment().format("l");
+            const dateFormat = moment().format("DD/MM/YYYY");
             const clientStyle =
               clients.checkboxStatus === 0
                 ? "client-list-display"

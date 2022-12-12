@@ -175,6 +175,53 @@ class EmailController {
       return res.status(500).send(err.message);
     }
   };
+
+  static sendTest = async (req, res, next) => {
+    const { email, textMail, name, surname } = req.body;
+
+    const message = {
+      from: EMAIL_USER,
+      to: EMAIL_USER,
+      subject: "Nouveau message via le Maraicheur",
+      html: `
+      <h1>Un nouveaux message via le maraicheur !!</h1>
+      <h2>ENVOYÉ DEPUIS: ${email}</h2>
+      <p style='font-size: 18px;'>Prénom: ${name} Nom: ${surname} <br/> ${textMail}</p>
+
+    `,
+    };
+
+    try {
+      await transporter.sendMail(message);
+      return next();
+    } catch (err) {
+      return res.status(500).send(err.message);
+    }
+  };
+
+  static sendWithSuccess = async (req, res) => {
+    const { email } = req.body;
+
+    const message = {
+      from: EMAIL_USER,
+      to: email,
+      // to: user.email,
+      subject: "Confirmation d'envoi",
+      html: `
+      <h1>Votre email à bien été envoyé</h1> <br/>
+      <h2>Nous vous répondrons le plus rapidement possible</h2> <br/>
+      <h3>Cordialement, le Maraicheur</h3>
+
+    `,
+    };
+
+    try {
+      await transporter.sendMail(message);
+      return res.status(200).send("Email sent with success");
+    } catch (err) {
+      return res.status(500).send(err.message);
+    }
+  };
 }
 
 module.exports = EmailController;

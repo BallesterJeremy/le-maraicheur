@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-import logo from "../assets/pictures/logo1.png";
-import home from "../assets/pictures/barn.png";
-import method from "../assets/pictures/plantadmin.png";
-import product from "../assets/pictures/radish.png";
-import about from "../assets/pictures/people.png";
-import contact from "../assets/pictures/email.png";
+import logo from "../assets/pictures/logo1.webp";
+import home from "../assets/pictures/barn.webp";
+import method from "../assets/pictures/plantadmin.webp";
+import product from "../assets/pictures/radish.webp";
+import about from "../assets/pictures/people.webp";
+import contact from "../assets/pictures/email.webp";
 import news from "../assets/pictures/news-paper.png";
 import market from "../assets/pictures/paniershop.png";
 

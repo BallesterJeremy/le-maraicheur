@@ -1,16 +1,16 @@
 import { useState } from "react";
 
-const useModal = () => {
-  const [isShowing, setIsShowing] = useState(false);
+const usePicto = () => {
+  const [showPicto, setShowPicto] = useState(false);
 
   function toggle() {
-    setIsShowing(!isShowing);
+    setShowPicto(!showPicto);
   }
 
   return {
-    isShowing,
+    showPicto,
     toggle,
   };
 };
 
-export default useModal;
+export default usePicto;

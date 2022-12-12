@@ -85,6 +85,7 @@ export default function ClientList() {
             style={{
               display: "flex",
               justifyContent: "center",
+
               width: "300px",
             }}
             sitekey="6Lcv1_0gAAAAAGFIJMCtmoB62_PXuLLrOSc9KSOm"

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import parse from "html-react-parser";
 import axios from "axios";
-import vegetables from "@assets/pictures/IMG_0349.png";
+import vegetables from "@assets/pictures/IMG_0349.webp";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";

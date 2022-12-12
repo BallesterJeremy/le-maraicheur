@@ -1,5 +1,5 @@
 import LeftSlide from "@components/Leftslide";
-import AproposEditor from "@components/AproposEditor";
+import TeamPost from "@components/TeamPost";
 import Topslide from "@components/Topslide";
 
 export default function AdminMethode() {
@@ -9,7 +9,7 @@ export default function AdminMethode() {
       <Topslide />
       <div className="position-admin--editor">
         <div className="background-texteditor">
-          <AproposEditor />
+          <TeamPost />
         </div>
       </div>
     </section>

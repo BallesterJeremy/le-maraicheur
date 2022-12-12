@@ -124,9 +124,9 @@ export default function ResetPassword() {
           </NavLink>
         </div>
         <div className="introduction">
-          <h1>Le Maraîcheur - Mot de passe oublié</h1>
+          <h1>SAP Santé - Mot de passe oublié</h1>
           <p>
-            Vous avez oublié votre mot de passe? Pas de soucis! Veuillez
+            Vous avez oublié votre mot de passe ? Pas de soucis! Veuillez
             simplement remplir les champs suivants.
           </p>
         </div>

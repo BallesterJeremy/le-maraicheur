@@ -3,9 +3,18 @@
   width: 100%;
   margin-bottom: 70px;
   margin-top: 12px;
-
   align-items: center;
 }
+
+.team-container-bis {
+  display: flex;
+  width: 100%;
+  margin-bottom: 140px;
+  margin-top: 12px;
+  align-items: center;
+  height: 472px;
+}
+
 .container-image-propos {
   display: flex;
   flex-direction: column-reverse;
@@ -33,8 +42,8 @@
   display: none;
 }
 
-.container--paragraphe-propos{
-  margin-top: -30px
+.container--paragraphe-propos {
+  margin-top: -30px;
 }
 
 .team-image {
@@ -84,7 +93,6 @@
 }
 
 @media (max-width: 900px) {
-
   #buttonshowmore {
     align-self: flex-end;
     display: flex;
@@ -103,6 +111,16 @@
     justify-content: space-around;
     align-items: center;
     margin: 0;
+  }
+
+  .team-container-bis {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 140px;
+    margin-top: 12px;
+    align-items: center;
+    height: 472px;
   }
 
   .teamtitle {

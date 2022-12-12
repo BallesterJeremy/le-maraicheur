@@ -10,10 +10,20 @@ import ImageMethodeFourth from "@components/ImageMethode/ImageMethodeFourth";
 import TextMethodeThird from "@components/TextMethode/TextMethodeThird";
 import TextMethodeFourth from "@components/TextMethode/TextMethodeFourth";
 import Navbar from "@components/Navbar";
+import { Helmet } from "react-helmet";
 
 export default function Methode() {
   return (
     <>
+      <Helmet>
+        <meta
+          charSet="utf-8"
+          name="content"
+          content="Antoine Debray, Le Maraicheur maraicher situé à La Croix-du-Perche"
+        />
+        <title>Methode - Le Maraicheur </title>
+        <link href="http://lemaraicheur.com/methode" />
+      </Helmet>
       <Navbar />
       <MenuBurger />
       <ImageMethode />

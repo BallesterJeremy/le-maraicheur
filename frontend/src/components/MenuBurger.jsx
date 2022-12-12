@@ -5,16 +5,16 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/button-has-type */
 import React, { useState } from "react";
-import logo1 from "@assets/pictures/logo1.png";
-import logo2 from "@assets/pictures/logo2.png";
-import house from "@assets/pictures/barn.png";
-import produit from "@assets/pictures/radish.png";
-import methode from "@assets/pictures/plantadmin.png";
-import propos from "@assets/pictures/people.png";
-import contact from "@assets/pictures/email.png";
+import logo1 from "@assets/pictures/logo1.webp";
+import logo2 from "@assets/pictures/logo2.webp";
+import house from "@assets/pictures/barn.webp";
+import produit from "@assets/pictures/radish.webp";
+import methode from "@assets/pictures/plantadmin.webp";
+import propos from "@assets/pictures/people.webp";
+import contact from "@assets/pictures/email.webp";
 import { NavLink } from "react-router-dom";
-import burgerlogo from "../assets/pictures/crate.png";
-import close from "../assets/pictures/close.png";
+import burgerlogo from "../assets/pictures/crate.webp";
+import close from "../assets/pictures/close.webp";
 
 export default function MenuBurger() {
   const [showBurger, setShowBurger] = useState(false);

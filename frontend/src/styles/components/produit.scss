@@ -24,13 +24,22 @@
   }
 }
 
+.nothing-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50% 0 50% 0;
+}
+
 .product-image {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 40px;
 }
-
+.legumes-products {
+  display: none;
+}
 .imageprod1 {
   filter: drop-shadow(5px 5px 4px rgba(44, 47, 51, 0.4));
   width: 70%;
@@ -42,7 +51,6 @@
     transform: scale(1.05);
   }
 }
-
 
 .spanLine {
   margin-top: 10px;

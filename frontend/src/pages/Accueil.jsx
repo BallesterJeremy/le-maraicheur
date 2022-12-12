@@ -8,10 +8,20 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import Newsletter from "@components/Newsletter";
 import ArticleCard from "@components/ArticleCard";
+import { Helmet } from "react-helmet";
 
 export default function Accueil() {
   return (
     <>
+      <Helmet>
+        <meta
+          charSet="utf-8"
+          name="content"
+          content="Antoine Debray, Le Maraicheur maraicher situé à La Croix-du-Perche"
+        />
+        <title>Accueil - Le Maraicheur </title>
+        <link href="http://lemaraicheur.com/accueil" />
+      </Helmet>
       <Navbar />
       <MenuBurger />
       <Carousels />

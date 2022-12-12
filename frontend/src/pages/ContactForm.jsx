@@ -4,24 +4,66 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable import/newline-after-import */
 /* eslint-disable import/no-unresolved */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-alert */
+/* eslint-disable consistent-return */
+
 import "@components/ContactForm.css";
+import axios from "axios";
 import MenuBurger from "@components/MenuBurger";
 import Preorder from "@components/Preorder";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import logo3 from "@assets/pictures/logo3.png";
 import ReCAPTCHA from "react-google-recaptcha";
+
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [verified, setVerified] = useState(false);
+  const [email, setEmail] = useState("");
+  const [textMail, setTextMail] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
 
-  const onSubmit = () => {
-    // console.log("Captcha value:", value);
+  const onSubmit = (e) => {
+    e.preventDefault();
     setVerified(true);
   };
+
+  const postEmail = async (e) => {
+    e.preventDefault();
+    try {
+      const postData = { email, textMail, name, surname };
+      // eslint-disable-next-line no-unused-vars
+      const newPost = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}emails/contactForm`,
+        postData
+      );
+      setVerified(true);
+      return alert(
+        "Le mail a bien été envoyé !",
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500)
+      );
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div>
+      <Helmet>
+        <meta
+          charSet="utf-8"
+          name="content"
+          content="Antoine Debray, Le Maraicheur maraicher situé à La Croix-du-Perche"
+        />
+        <title>Contact - Le Maraicheur </title>
+        <link href="http://lemaraicheur.com/contact" />
+      </Helmet>
       <Navbar />
       <MenuBurger />
       <h1 className="titre-contact">Nous contacter</h1>
@@ -30,14 +72,14 @@ const Contact = () => {
         <section className="container-form-grid">
           <div className="form-contact">
             <form
-              onSubmit={onSubmit}
+              onSubmit={postEmail}
               name="contact"
               method="post"
               className="contact_form"
             >
               <img
                 className="logo-maraicheur"
-                src="./src/assets/pictures/logo2.png"
+                src="./src/assets/pictures/logo2.webp"
               />
               <div className="logo-mobile">
                 <img className="logo-maraicheur2" src={logo3} />
@@ -47,6 +89,8 @@ const Contact = () => {
                 <label className="contact-label">
                   Prénom*{" "}
                   <input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     className="nom-prenom"
                     type="text"
                     name="prénom"
@@ -57,6 +101,8 @@ const Contact = () => {
                 <label className="contact-label">
                   Nom*{" "}
                   <input
+                    value={surname}
+                    onChange={(e) => setSurname(e.target.value)}
                     className="nom-prenom"
                     type="text"
                     name="nom"
@@ -67,6 +113,8 @@ const Contact = () => {
               <label className="email-label">
                 Email*{" "}
                 <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="email"
                   type="email"
                   name="email"
@@ -77,6 +125,8 @@ const Contact = () => {
               <label className="message-contact">
                 Message*{" "}
                 <textarea
+                  value={textMail}
+                  onChange={(e) => setTextMail(e.target.value)}
                   rows="10"
                   cols="50"
                   placeholder="Saisissez votre message ici..."
@@ -89,7 +139,7 @@ const Contact = () => {
                   onChange={onSubmit}
                 />
                 <button
-                  disabled={!verified}
+                  // disabled={!verified}
                   className="button-contact"
                   type="submit"
                 >

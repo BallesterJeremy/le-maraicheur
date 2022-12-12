@@ -1,49 +1,120 @@
-
-.market-container{
-    display: flex;
-    justify-content: space-between;
+.market-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .update-products {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .update-selector{
-    width: 250px;
-    border-radius: 10px;
-    height: 30px;
-    border: none;
-    margin: 10px;
-    padding-left: 10px;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-  }
+.update-selector {
+  width: 250px;
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+  margin: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
 
-  .update-text{
-    color: white;
+.update-text {
+  color: white;
+  flex-direction: column;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.update-options {
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+  margin: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.update-button {
+  margin: 15px;
+  background: #2c2f33;
+  width: 250px;
+  height: 45px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: 1s;
+}
+
+.update-sup-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.suppress-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-container-market {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 40%;
+
+  label {
+    color: $white;
     flex-direction: column;
     margin-top: 15px;
     font-family: "Poppins", sans-serif;
     display: flex;
     margin-right: 15px;
-    margin-left: 15px;
   }
 
-  .update-options{
+  input {
     border-radius: 10px;
     height: 30px;
     border: none;
-    margin: 10px;
     padding-left: 10px;
     font-size: 16px;
     font-family: "Poppins", sans-serif;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  select {
+    border-radius: 10px;
+    margin-top: 15px;
+    height: 30px;
+    color: $black;
+    border: none;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .update-button {
-    margin: 15px;
-    background: #2c2f33;
+  button {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    background: $black;
     width: 250px;
     height: 45px;
     border-radius: 15px;
@@ -55,83 +126,10 @@
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     transition: 1s;
-  }
 
-  .update-sup-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  .suppress-product{
-    display: flex;
-    flex-direction: column  ;
-  }
-
-  .upload-container-market {
-    margin-top: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
-    width: 40%;
-  
-    label {
-      color: $white;
-      flex-direction: column;
-      margin-top: 15px;
-      font-family: "Poppins", sans-serif;
-      display: flex;
-      margin-right: 15px;
-    }
-  
-    input {
-      border-radius: 10px;
-      height: 30px;
-      border: none;
-      padding-left: 10px;
-      font-size: 16px;
-      font-family: "Poppins", sans-serif;
-  
-      &:focus {
-        outline: none;
-      }
-    }
-    select {
-      border-radius: 10px;
-      margin-top: 15px;
-      height: 30px;
-      color: $black;
-      border: none;
-      padding-left: 10px;
-      font-size: 16px;
-      font-family: "Poppins", sans-serif;
-  
-      &:focus {
-        outline: none;
-      }
-    }
-  
-    button {
-      margin-top: 15px;
-      margin-left: 15px;
-      margin-bottom: 15px;
-      background: $black;
-      width: 250px;
-      height: 45px;
-      border-radius: 15px;
-      cursor: pointer;
-      border: none;
-      text-transform: uppercase;
-      color: white;
-      text-decoration: underline;
-      font-family: "Montserrat", sans-serif;
-      font-size: 1rem;
+    &:hover {
       transition: 1s;
-  
-      &:hover {
-        transition: 1s;
-        transform: scale(1.05);
-      }
+      transform: scale(1.05);
     }
-  
   }
+}

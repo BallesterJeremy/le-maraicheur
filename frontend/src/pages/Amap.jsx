@@ -11,10 +11,20 @@ import ImageAmapFirst from "@components/ImageAmap/ImageAmapFirst";
 import ImageAmapSec from "@components/ImageAmap/ImageAmapSec";
 import ImageAmapThird from "@components/ImageAmap/ImageAmapThird";
 import ImageAmapFourth from "@components/ImageAmap/ImageAmapFourth";
+import { Helmet } from "react-helmet";
 
 export default function Amap() {
   return (
     <>
+      <Helmet>
+        <meta
+          charSet="utf-8"
+          name="content"
+          content="Antoine Debray, Le Maraicheur maraicher situé à La Croix-du-Perche"
+        />
+        <title>Amap - Le Maraicheur </title>
+        <link href="http://lemaraicheur.com/amap" />
+      </Helmet>
       <Navbar />
       <MenuBurger />
       <ImageAmapFirst />

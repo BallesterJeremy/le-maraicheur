@@ -5,7 +5,7 @@ const models = require("../models");
 
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => {
-    cb(null, "public/assets/images");
+    cb(null, path.join(__dirname, "../../public/assets/images/"));
   },
 
   filename: (_, file, cb) => {
@@ -118,18 +118,6 @@ class ProductController {
         res.sendStatus(500);
       });
   };
-
-  // static delete = (req, res) => {
-  //   models.product
-  //     .delete(req.params.id)
-  //     .then(() => {
-  //       res.sendStatus(204);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //       res.sendStatus(500);
-  //     });
-  // };
 
   static delete = async (req, res) => {
     const productId = parseInt(req.params.id, 10);

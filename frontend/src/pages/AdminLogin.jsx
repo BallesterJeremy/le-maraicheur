@@ -14,7 +14,7 @@ import InformationLoginAlert from "@components/InformationLoginAlert";
 import WarningAlert from "@components/WarningAlert";
 import SuccesEmailAlert from "@components/SuccesEmailAlert";
 import AlertError from "@components/AlertError";
-import logo from "../assets/pictures/logo1.png";
+import logo from "../assets/pictures/logo1.webp";
 import eyesHidden from "../assets/pictures/invisible.png";
 import eyesUnhidden from "../assets/pictures/yeux.png";
 

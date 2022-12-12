@@ -232,7 +232,7 @@ export default function Upload() {
             {image.length
               ? image.map((img) => (
                   <option value={img.id} key={img.id}>
-                    {img.file}
+                    {img.alt}
                   </option>
                 ))
               : "Il n'y a pas d'images"}
